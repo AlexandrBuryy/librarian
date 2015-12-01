@@ -5,8 +5,10 @@ class SearchController < ApplicationController
       @books = client.search({title: params[:q][:author]})
      # 30.times {puts params}
       puts  params
+      @boooo = client.search({author: params[:q][:title]})
             respond_to do |format|
-        format.js { render 'create'}
+        puts params
+             format.js { render 'create'}
         #format.html
         end
   end
