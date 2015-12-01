@@ -1,0 +1,13 @@
+<%=  form_for :q, url: search_index_path, remote: true do |f| %>
+<h1 align = "center" style ="color: green">Librarian</h1>
+	
+	<h2 style = "color: blue">Поиск по автору:</h2>	
+	<p><%= f.text_field :title %>
+	   <%#= f.submit "Поиск по названию"%>
+	</p>
+  	<h2 style = "color: blue">Поиск по названию книги:</h2>	
+	<p><%= f.text_field :author %>
+	  
+	</p>
+	 <p align="center" style="font-size: 10px"><%= f.submit "Поиск" %></p>
+<% end %>
